@@ -21,7 +21,7 @@ Clone repository from github to your local drive by following these steps:
 - Above the listed files, click the green Code button
 - You can clone the repository using:
   - GitHub CLI: gh repo clone amiraabouhadid/project2_enumerable_methods.git.
-  - SSH:git clone git@github.com:amiraabouhadid/project2_enumerable_methods.git.
+  - SSH:git clone git@github.com:verissimohenry/RUBY-PROJECT-2-ENUMERABLE-.git
   - HTTPS:git clone https://github.com/amiraabouhadid/project2_enumerable_methods.git.
 - Open Terminal
 - Change the current working directory to the location you want the cloned directory
