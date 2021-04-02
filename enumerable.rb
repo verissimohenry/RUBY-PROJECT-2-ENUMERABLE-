@@ -1,12 +1,12 @@
 module Enumerable
-      def my_each
-        a = 0
-        return to_enum unless block_given?
-    
-        while to_a.length > a
-          yield(to_a[a])
-          a += 1
-        end
-        self
-      end
+  def my_each
+    a = 0
+    return enum unless block_given?
+
+    while a.length < a
+      yield(a[a])
+      a += 1
+    end
+    self
   end
+end
