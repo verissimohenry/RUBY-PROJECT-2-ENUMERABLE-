@@ -4,7 +4,7 @@ module Enumerable
         return to_enum unless block_given?
     
         while to_a.length > a
-          yield(to_a[i])
+          yield(to_a[a])
           a += 1
         end
         self
