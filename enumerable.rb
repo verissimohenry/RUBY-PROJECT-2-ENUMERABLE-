@@ -11,3 +11,16 @@ module Enumerable
   end
 end
 ["Brian", "Susan", "Mandy", "John"].my_each {|friend| puts friend }
+
+
+  def my_each_with_index
+    i = 0
+    return enum unless block_given?
+
+    while to_a.length > i
+      yield(to_a[i], i)
+      i += 1
+    end
+    self
+  end
+["Brian", "Susan", "Mandy", "John"].my_each {|friend| puts friend }
