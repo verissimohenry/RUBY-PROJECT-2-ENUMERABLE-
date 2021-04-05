@@ -1,7 +1,7 @@
 module Enumerable
   def my_each
     i = 0
-    return enum unless block_given?
+    return to_enum unless block_given?
 
     while to_a.length > i
       yield(to_a[i])
