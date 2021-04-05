@@ -36,12 +36,6 @@ Clone repository from github to your local drive by following these steps:
 
 - Install Atom or Microsoft Visual Studio text editor to view the code on your local machine.
 - Install Git.
-
-### Deployment
-
-- Open live-server from your text-editor to see the website.
-- Use github pages to view from the Live Demo link above.
-
 ## Authors
 
 👤 **Verissimo Henry**
