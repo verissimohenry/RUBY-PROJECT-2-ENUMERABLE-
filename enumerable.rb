@@ -24,3 +24,12 @@ end
     self
   end
 ["Brian", "Susan", "Mandy", "John"].my_each {|friend| puts friend }
+
+def my_select
+  new_array = []
+  return enum unless block_given?
+
+  to_a.my_each { |item| new_array.push(item) if yield(item) }
+  new_array
+end
+["Brian", "Susan", "Mandy", "John"].my_each {|friend| puts friend }
