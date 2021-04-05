@@ -75,3 +75,17 @@ def my_none?(prms = nil)
     !my_any?(prms)
   end
 end
+["Brian", "Susan", "Mandy", "John"].my_each {|friend| puts friend }
+
+def my_count(params = nil)
+  i = 0
+  if params.nil? && !block_given?
+    to_a.my_each { |_item| i += 1 }
+  elsif !params.nil?
+    to_a.my_each { |item| i += 1 if item == params }
+  else
+    to_a.my_each { |item| i += 1 if yield(item) }
+  end
+  i
+end
+["Brian", "Susan", "Mandy", "John"].my_each {|friend| puts friend }
