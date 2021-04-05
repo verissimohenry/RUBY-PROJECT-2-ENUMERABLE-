@@ -1,14 +1,14 @@
 module Enumerable
-    def my_each
-      i = 0
-      return enum unless block_given?
+  def my_each
+    i = 0
+    return enum unless block_given?
 
-      while to_a.length > i
-        yield(to_a[i])
-        i += 1
-      end
-      self
+    while to_a.length > i
+      yield(to_a[i])
+      i += 1
     end
+    self
+  end
 
   def my_each_with_index
     i = 0
@@ -107,6 +107,6 @@ module Enumerable
   end
 end
 
-  def multiply_els(arr)
-    arr.my_inject(:*)
-  end
+def multiply_els(arr)
+  arr.my_inject(:*)
+end
