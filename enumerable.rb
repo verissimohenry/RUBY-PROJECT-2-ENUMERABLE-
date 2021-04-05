@@ -102,3 +102,18 @@ def my_map(proc = nil)
   end
   new_array
 end
+["Brian", "Susan", "Mandy", "John"].my_each {|friend| puts friend }
+
+def my_inject(value = nil, symbol = nil)
+  if (!value.nil? && symbol.nil?) && (value.is_a?(Symbol) || value.is_a?(String))
+    symbol = value
+    value = nil
+  end
+  if !block_given? && !symbol.nil?
+    to_a.my_each { |item| value = value.nil? ? item : value.send(symbol, item) }
+  else
+    to_a.my_each { |item| value = value.nil? ? item : yield(value, item) }
+  end
+  value
+end
+["Brian", "Susan", "Mandy", "John"].my_each {|friend| puts friend }
