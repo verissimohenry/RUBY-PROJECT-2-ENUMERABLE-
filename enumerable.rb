@@ -116,4 +116,9 @@ def my_inject(value = nil, symbol = nil)
   end
   value
 end
-["Brian", "Susan", "Mandy", "John"].my_each {|friend| puts friend }
+#["Brian", "Susan", "Mandy", "John"].my_each {|friend| puts friend }
+
+def multiply_els(arr)
+  arr.my_inject(:*)
+end
+#["Brian", "Susan", "Mandy", "John"].my_each {|friend| puts friend }
