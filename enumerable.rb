@@ -89,3 +89,16 @@ def my_count(params = nil)
   i
 end
 ["Brian", "Susan", "Mandy", "John"].my_each {|friend| puts friend }
+
+def my_map(proc = nil)
+  return to_enum unless block_given? || !proc.nil?
+
+  new_array = []
+  if proc.nil?
+    to_a.my_each { |item| new_array << yield(item) }
+
+  else
+    to_a.my_each { |item| new_array << proc.call(item) }
+  end
+  new_array
+end
