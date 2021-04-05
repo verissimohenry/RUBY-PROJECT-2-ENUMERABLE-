@@ -10,7 +10,7 @@ module Enumerable
     self
   end
 end
-["Brian", "Susan", "Mandy", "John"].my_each {|friend| puts friend }
+#["Brian", "Susan", "Mandy", "John"].my_each {|friend| puts friend }
 
 
   def my_each_with_index
@@ -23,7 +23,7 @@ end
     end
     self
   end
-["Brian", "Susan", "Mandy", "John"].my_each {|friend| puts friend }
+#["Brian", "Susan", "Mandy", "John"].my_each {|friend| puts friend }
 
 def my_select
   new_array = []
@@ -32,7 +32,7 @@ def my_select
   to_a.my_each { |item| new_array.push(item) if yield(item) }
   new_array
 end
-["Brian", "Susan", "Mandy", "John"].my_each {|friend| puts friend }
+#["Brian", "Susan", "Mandy", "John"].my_each {|friend| puts friend }
 
 
 def my_all?(params = nil)
@@ -49,7 +49,7 @@ def my_all?(params = nil)
   end
   true
 end
-["Brian", "Susan", "Mandy", "John"].my_each {|friend| puts friend }
+#["Brian", "Susan", "Mandy", "John"].my_each {|friend| puts friend }
 
 def my_any?(params = nil)
   if block_given?
@@ -66,7 +66,7 @@ def my_any?(params = nil)
   end
   false
 end
-["Brian", "Susan", "Mandy", "John"].my_each {|friend| puts friend }
+#["Brian", "Susan", "Mandy", "John"].my_each {|friend| puts friend }
 
 def my_none?(prms = nil)
   if block_given?
@@ -75,7 +75,7 @@ def my_none?(prms = nil)
     !my_any?(prms)
   end
 end
-["Brian", "Susan", "Mandy", "John"].my_each {|friend| puts friend }
+#["Brian", "Susan", "Mandy", "John"].my_each {|friend| puts friend }
 
 def my_count(params = nil)
   i = 0
@@ -88,7 +88,7 @@ def my_count(params = nil)
   end
   i
 end
-["Brian", "Susan", "Mandy", "John"].my_each {|friend| puts friend }
+#["Brian", "Susan", "Mandy", "John"].my_each {|friend| puts friend }
 
 def my_map(proc = nil)
   return to_enum unless block_given? || !proc.nil?
@@ -102,7 +102,7 @@ def my_map(proc = nil)
   end
   new_array
 end
-["Brian", "Susan", "Mandy", "John"].my_each {|friend| puts friend }
+#["Brian", "Susan", "Mandy", "John"].my_each {|friend| puts friend }
 
 def my_inject(value = nil, symbol = nil)
   if (!value.nil? && symbol.nil?) && (value.is_a?(Symbol) || value.is_a?(String))
