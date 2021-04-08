@@ -29,7 +29,7 @@ module Enumerable
     new_array
   end
 
-  def my_all?(params = nil)
+  def myall?(params = nil)
     if block_given?
       to_a.my_each { |item| return false if yield(item) == false }
     elsif params.nil?
