@@ -88,4 +88,47 @@ describe '#my_all' do
       expect(words.my_any?(Integer) == words.any?(Integer)).to eql(true)
     end
   end
+
+  #   my_each tests
+  describe '#my_each' do
+    it 'check each element of an array' do
+      expect(%w[aca verissimo henry].my_each do |x|
+               p x != 'aca'
+             end == %w[aca verissimo henry].each do |x|
+                      p x != 'aca'
+                    end).to eql(true)
+    end
+    it 'check each element of an array' do
+      expect([1, 2, 3, 4, 5].my_each do |x|
+               p x > 3
+             end == [1, 2, 3, 4, 5].each do |x|
+                      p x > 3
+                    end).to eql(true)
+    end
+    it 'return true if it is an Enumerator' do
+      expect([1, 2, 3].my_each.instance_of?(Enumerator)).to eql(true)
+    end
+  end
+
+  #   my_each_with_index tests
+
+  describe '#my_each_with_index' do
+    it 'should check each element of an array' do
+      expect(%w[aca verissimo henry].my_each_with_index do |x|
+               p x != 'aca'
+             end == %w[aca verissimo henry].each do |x|
+                      p x != 'aca'
+                    end).to eql(true)
+    end
+    it 'check each element of an array' do
+      expect([1, 2, 3, 4, 5].my_each_with_index do |x|
+               p x > 3
+             end == [1, 2, 3, 4, 5].each do |x|
+                      p x > 3
+                    end).to eql(true)
+    end
+    it 'return true if it is an Enumerator' do
+      expect([1, 2, 3].my_each_with_index.instance_of?(Enumerator)).to eql(true)
+    end
+  end
 end
