@@ -13,6 +13,7 @@ module Enumerable
   def my_each_with_index
     i = 0
     return to_enum unless block_given?
+
     while to_a.length > i
       yield(to_a[i], i)
       i += 1
@@ -23,6 +24,7 @@ module Enumerable
   def my_select
     new_array = []
     return to_enum unless block_given?
+
     to_a.my_each { |item| new_array.push(item) if yield(item) }
     new_array
   end
@@ -80,9 +82,11 @@ module Enumerable
 
   def my_map(proc = nil)
     return to_enum unless block_given? || !proc.nil?
+
     new_array = []
     if proc.nil?
       to_a.my_each { |item| new_array << yield(item) }
+
     else
       to_a.my_each { |item| new_array << proc.call(item) }
     end
