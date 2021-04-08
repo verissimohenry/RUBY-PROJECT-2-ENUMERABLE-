@@ -155,17 +155,17 @@ describe '#my_all' do
       expect(array.my_inject(&operation) == array.inject(&operation)).to eql(true)
     end
 
-    it 'when a block is given without initial value it combines all elements of enum, apply binary spc by block:range' do
+    it 'when block is given without initial value it combines all elements of enum, apply binary spc by block:range' do
       actual = range.my_inject { |prod, n| prod * n }
       expected = range.inject { |prod, n| prod * n }
       expect(actual == expected).to eql(true)
     end
 
-    it 'when a symbol is given without initial value it combines all elements of enum, apply binary spc b named method' do
+    it 'when symbol is given without initial value it combines all elements of enum, apply binary spc b named method' do
       expect(array.my_inject(:+) == array.inject(:+)).to eql(true)
     end
 
-    it 'when a symbol is given without initial value it combines all elements of enum, apply binary spc b named method' do
+    it 'when symbol is given without initial value it combines all elements of enum, apply binary spc b named method' do
       expect(array.my_inject(:*) == array.inject(:*)).to eql(true)
     end
 
