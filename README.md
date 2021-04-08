@@ -36,6 +36,7 @@ Clone repository from github to your local drive by following these steps:
 
 - Install Atom or Microsoft Visual Studio text editor to view the code on your local machine.
 - Install Git.
+
 ## Authors
 
 👤 **Verissimo Henry**
