@@ -217,4 +217,17 @@ describe '#my_all' do
       expect(words.my_none?(5) == words.none?(5)).to eql(true)
     end
   end
+
+  #   #my_select tests
+  describe '#my_select' do
+    it 'should return true if block returns false or nil' do
+      expect([1, 2, 3, 4, 5].my_select(&:odd?) == [1, 2, 3, 4, 5].select(&:odd?)).to eql(true)
+    end
+    it 'should return true if block returns false or nil' do
+      expect([1, 2, 3, 4, 5].my_select { |n| n > 3 } == [1, 2, 3, 4, 5].select { |n| n > 3 }).to eql(true)
+    end
+    it 'should return true if it is an Enumerator' do
+      expect([1, 2, 3].my_select.instance_of?(Enumerator)).to eql(true)
+    end
+  end
 end
