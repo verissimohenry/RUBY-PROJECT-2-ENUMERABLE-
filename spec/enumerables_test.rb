@@ -230,4 +230,14 @@ describe '#my_all' do
       expect([1, 2, 3].my_select.instance_of?(Enumerator)).to eql(true)
     end
   end
+
+  #   multiply_els test
+  describe '#multiply_els' do
+    it 'should return true based on calc of #my_inject' do
+      expect(multiply_els([2, 4, 5]) == 40).to eql(true)
+    end
+    it 'should return false based on calc of  #my_inject' do
+      expect(multiply_els([2, 4, 5]) == 50).to eql(false)
+    end
+  end
 end
