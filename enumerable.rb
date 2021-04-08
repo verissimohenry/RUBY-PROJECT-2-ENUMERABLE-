@@ -1,3 +1,4 @@
+# rubocop:disable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity
 module Enumerable
   def my_each
     i = 0
@@ -60,11 +61,11 @@ module Enumerable
     false
   end
 
-  def my_none?(prms = nil)
+  def my_none?(params = nil)
     if block_given?
       !my_any?(&Proc.new)
     else
-      !my_any?(prms)
+      !my_any?(params)
     end
   end
 
@@ -106,6 +107,7 @@ module Enumerable
     value
   end
 end
+# rubocop:enable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity
 
 def multiply_els(arr)
   arr.my_inject(:*)
