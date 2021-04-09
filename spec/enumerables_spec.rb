@@ -225,20 +225,20 @@ describe '#my_count' do
     expect([11, 12, 14, 9, 8].my_count(&:even?)).to be(3)
   end
   it 'should counts the words in a string that is longer than 4 characters ' do
-    expect(%w[felix shaher test code].my_count { |el| el.length > 4 }).to be(2)
+    expect(%w[henry verissimo test code].my_count { |el| el.length > 4 }).to be(2)
   end
   it 'should counts the number of hash values that are odd number' do
     expect({ k1: 10, k2: 9, k3: 8, k4: 7 }.my_count { |_k, v| v.odd? }).to eq(2)
   end
   it 'should counts the number os words has the b character ' do
-    expect(%w[felix shaher test code].my_count(/b/)).to be(0)
+    expect(%w[henry verissimo test code].my_count(/b/)).to be(0)
   end
 
   it 'should counts the number of times the number three in the array ' do
     expect([1, 2, 3, 4, 3, 3].my_count(3)).to be(3)
   end
   it 'should counts the number of the words in a given array ' do
-    expect(%w[felix shaher test code].my_count { |word| word.count(word) }).to be(4)
+    expect(%w[henry verissimor test code].my_count { |word| word.count(word) }).to be(4)
   end
 
   it 'should counts the number of the elemnts in the array ' do
