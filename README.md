@@ -36,6 +36,24 @@ Clone repository from github to your local drive by following these steps:
 
 - Install Atom or Microsoft Visual Studio text editor to view the code on your local machine.
 - Install Git.
+
+## Enumerables
+
+- Used Ruby Language to define various methods.
+
+## Methods
+
+- We write methods about,my_each, my_each_with_index, my_select,#my_all?# my_any? #my_none?# my_count, #my_map, #my_inject, and last we use proc im #my_map
+
+## Languages Used
+
+- Ruby
+
+### Testing instructions
+
+-to run tests cd into enumerables then type in terminal:
+`rspec spec/enumerables_test.rb`
+
 ## Authors
 
 👤 **Verissimo Henry**
