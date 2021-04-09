@@ -220,7 +220,9 @@ describe '#my_none' do
 end
 
 #   #my_count tests
-
+describe '#my_count' do
+  
+end  
 
 #   #my_select tests
 describe '#my_select' do
