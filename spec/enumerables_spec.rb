@@ -219,6 +219,9 @@ describe '#my_none' do
   end
 end
 
+#   #my_count tests
+
+
 #   #my_select tests
 describe '#my_select' do
   it 'should return true if block returns false or nil' do
