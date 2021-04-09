@@ -1,4 +1,4 @@
-require_relative '../enumerables'
+require_relative '../enumerable'
 #   #my_all tests
 describe '#my_all' do
   let(:range) { Range.new(5, 50) }
